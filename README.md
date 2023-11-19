@@ -22,10 +22,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ```bash
 # Get your own token and DB from your link
-# https://www.notion.so/some_token_here_is_the_one_you_should_take?v=idk_what_is_this_dont_take
-
 # Example from link above and the token below
-NOTION_TOKEN="your_secret_token"
-NOTION_CLASSES_DB="notion92fc734784ad820c9588893ftw"
 
+NOTION_TOKEN="your_secret_token_from_this_link" https://www.notion.so/my-integrations
+NOTION_CLASSES_DB="some_token_here_is_the_one_from above" https://www.notion.so/some_token_here_is_the_one_you_should_take?v=idk_what_is_this_dont_take
 ```

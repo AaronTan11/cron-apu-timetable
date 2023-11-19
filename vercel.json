@@ -1,12 +1,8 @@
 {
     "crons": [
         {
-            "path": "/api/get-classes",
-            "schedule": "0 23 * * * 5"
-        },
-        {
             "path": "/api/write-to-notion",
-            "schedule": "0 23 * * * 5"
+            "schedule": "0 23 * * 5"
         }
     ]
 }

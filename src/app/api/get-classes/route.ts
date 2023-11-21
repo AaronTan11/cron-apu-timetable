@@ -40,7 +40,7 @@ export async function GET(req: Request) {
     const notionClasses = await notion.databases.query({
         database_id: dbId!,
         filter: {
-            property: "Class_Time",
+            property: "DateTime",
             date: {
                 is_not_empty: true,
             },
@@ -50,13 +50,14 @@ export async function GET(req: Request) {
     const classTimeInNotion = notionClasses.results.map((result) => {
         if (
             "properties" in result &&
-            "Class_Time" in result.properties &&
-            "date" in result.properties.Class_Time
+            "DateTime" in result.properties &&
+            "date" in result.properties.DateTime
         ) {
-            const data = DateTime.fromISO(result.properties.Class_Time.date!.start);
-            const localDateTime = data.toLocal();
-            const formattedDateTime = localDateTime.toFormat("yyyy-LL-dd'T'HH:mm:ssZZ");
+            const data = DateTime.fromISO(result.properties.DateTime.date!.start);
+            const formattedDateTime = data.toFormat("yyyy-LL-dd'T'HH:mm:ssZZ");
             return formattedDateTime;
+        } else {
+            return null;
         }
     });
 

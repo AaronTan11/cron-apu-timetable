@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 I'm using pnpm and pushed this repo with pnpm-lock.yaml so if you want to use other package manager, **please delete the file**!
+Your Column should be **DateTime** however you can customize it if you want, if there is a better name welcome to open an issue here and submit a PR.
 
 First, run the development server:
 
@@ -33,3 +34,5 @@ Then you can self host on your own Vercel account.
 ## Plans for this project
 
 I'm thinking of adding Google Calendar as well, but i'm lazy so maybe a few days later
+
+This project is open for PR and issues to discuss what to add and improve.

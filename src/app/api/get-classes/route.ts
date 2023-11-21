@@ -64,8 +64,8 @@ export async function GET(req: Request) {
 
     const myIntake = data.filter((item) => item.INTAKE === "APU2F2311SE");
 
-    const filterOutExistingSchedules = myIntake.filter((element) =>
-        classTimeInNotion.includes(element.TIME_FROM_ISO!)
+    const filterOutExistingSchedules = myIntake.filter(
+        (element) => !classTimeInNotion.includes(element.TIME_FROM_ISO!)
     );
 
     return Response.json(filterOutExistingSchedules);

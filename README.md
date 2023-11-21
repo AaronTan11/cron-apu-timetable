@@ -27,3 +27,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 NOTION_TOKEN="your_secret_token_from_this_link" https://www.notion.so/my-integrations
 NOTION_CLASSES_DB="some_token_here_is_the_one_from above" https://www.notion.so/some_token_here_is_the_one_you_should_take?v=idk_what_is_this_dont_take
 ```
+
+Then you can self host on your own Vercel account.
+
+## Plans for this project
+
+I'm thinking of adding Google Calendar as well, but i'm lazy so maybe a few days later

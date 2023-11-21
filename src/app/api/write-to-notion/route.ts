@@ -2,11 +2,11 @@ import { Client } from "@notionhq/client";
 import { Classes } from "../get-classes/route";
 import { GET } from "../get-classes/route";
 
-export const dynamic = "force-dynamic";
-
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 });
+
+const dbId = process.env.NOTION_CLASSES_DB;
 
 export async function POST(req: Request) {
     const classesRes = await GET(req);
@@ -17,7 +17,7 @@ export async function POST(req: Request) {
             await notion.pages.create({
                 parent: {
                     type: "database_id",
-                    database_id: process.env.NOTION_CLASSES_DB!,
+                    database_id: dbId!,
                 },
                 properties: {
                     Location: {

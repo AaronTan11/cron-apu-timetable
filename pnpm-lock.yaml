@@ -8,6 +8,9 @@ dependencies:
   '@notionhq/client':
     specifier: ^2.2.13
     version: 2.2.13
+  luxon:
+    specifier: ^3.4.4
+    version: 3.4.4
   next:
     specifier: 14.0.3
     version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
@@ -19,6 +22,9 @@ dependencies:
     version: 18.2.0(react@18.2.0)
 
 devDependencies:
+  '@types/luxon':
+    specifier: ^3.3.5
+    version: 3.3.5
   '@types/node':
     specifier: ^20
     version: 20.9.2
@@ -287,6 +293,10 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/luxon@3.3.5:
+    resolution: {integrity: sha512-1cyf6Ge/94zlaWIZA2ei1pE6SZ8xpad2hXaYa5JEFiaUH0YS494CZwyi4MXNpXD9oEuv6ZH0Bmh0e7F9sPhmZA==}
     dev: true
 
   /@types/node-fetch@2.6.9:
@@ -1769,6 +1779,11 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /luxon@3.4.4:
+    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
+    engines: {node: '>=12'}
+    dev: false
 
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}

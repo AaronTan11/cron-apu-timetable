@@ -1,6 +1,5 @@
 import { Client } from "@notionhq/client";
 import { Classes } from "../get-classes/route";
-import { GET } from "../get-classes/route";
 
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
@@ -9,7 +8,7 @@ const notion = new Client({
 const dbId = process.env.NOTION_CLASSES_DB;
 
 export async function POST(req: Request) {
-    const classesRes = await GET(req);
+    const classesRes = await fetch("http://localhost:3000/api/get-classes");
     const classesData: Classes[] = await classesRes.json();
 
     const notionClasses = classesData.map(
@@ -42,7 +41,7 @@ export async function POST(req: Request) {
                             },
                         ],
                     },
-                    Class_Time: {
+                    DateTime: {
                         type: "date",
                         date: {
                             start: classItem.TIME_FROM_ISO,

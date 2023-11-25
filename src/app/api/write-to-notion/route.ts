@@ -8,7 +8,9 @@ const notion = new Client({
 const dbId = process.env.NOTION_CLASSES_DB;
 
 export async function POST(req: Request) {
-    const classesRes = await fetch("http://localhost:3000/api/get-classes");
+    const apiEndpoint = process.env.API_ENDPOINT || "http://localhost:3000";
+    const classesRes = await fetch(`${apiEndpoint}/api/get-classes`);
+
     const classesData: Classes[] = await classesRes.json();
 
     const notionClasses = classesData.map(
